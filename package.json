@@ -1,0 +1,14 @@
+{
+  "name": "e-commerce-e2e-automation-framework",
+  "version": "1.0.0",
+  "description": "A production-style automation framework for an e-commerce app",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.1"
+  }
+}

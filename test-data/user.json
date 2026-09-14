@@ -1,0 +1,35 @@
+{
+  "name": "Muskaan",
+  "emailPrefix": "muskaan",
+  "password": "Muskaan12",
+  "title": "Mrs.",
+  "dateOfBirth": {
+    "day": "6",
+    "month": "3",
+    "year": "2018"
+  },
+  "newsletter": true,
+  "specialOffers": true,
+  "firstName": "Muskaan",
+  "lastName": "Timbadiya",
+  "company": "E-Commerce Test Company",
+  "address": "680 Folsom St",
+  "address2": "10",
+  "country": "United States",
+  "state": "California",
+  "city": "San Francisco",
+  "zipcode": "94107",
+  "mobile": "7456787653",
+  "signedin": {
+    "name": "Admin",
+    "email": "Admin@testing.com",
+    "password": "Test123",  
+    "wrongPassword": "Muskaan12"
+  },
+  "contactUs": {
+    "name": "Muskaan",
+    "email": "muskaan@test.com",
+    "subject": "Test Subject",
+    "message": "Test Message"
+  }   
+}
