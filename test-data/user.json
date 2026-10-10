@@ -31,5 +31,8 @@
     "email": "muskaan@test.com",
     "subject": "Test Subject",
     "message": "Test Message"
-  }   
+  },
+  "subscription": {
+    "email": "med@mend.com"
+  }
 }
