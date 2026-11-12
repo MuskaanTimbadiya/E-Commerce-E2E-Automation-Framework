@@ -24,7 +24,12 @@
     "name": "Admin",
     "email": "Admin@testing.com",
     "password": "Test123",  
-    "wrongPassword": "Muskaan12"
+    "wrongPassword": "Muskaan12",
+    "cardNumber": "4111111111111111",
+    "cvv": "123",
+    "expirationMonth": "12",
+    "expirationYear": "2025"
+
   },
   "contactUs": {
     "name": "Muskaan",
@@ -34,5 +39,9 @@
   },
   "subscription": {
     "email": "med@mend.com"
-  }
+  },
+  "cardNumber": "4111111111111111",
+  "cvv": "123",
+  "expirationMonth": "12",
+  "expirationYear": "2025"
 }

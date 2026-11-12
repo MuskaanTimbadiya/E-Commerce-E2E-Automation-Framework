@@ -39,7 +39,7 @@ test('user can register and delete an account', async ({ page }) => {
 });
 
 test('User can login with valid credentials', async ({ page }) => {
-  const user = userData.signedin;
+  const user = userData.signedin;  
   await HomePage.openSignupLogin(page);
   await LoginPage.login(page, user.email, user.password);
   await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
@@ -130,5 +130,17 @@ test('Verify product quantity in cart', async ({ page }) => {
   await cartPage.verifyCartPage(page);
   await cartPage.verifyProductInCart(page, Products.searchProduct.name);
   await cartPage.verifyProductQuantityInCart(page, Products.searchProduct.name, 4);
+});
+
+test('User removes product from cart', async ({ page }) => {
+  await HomePage.clickProductsLink(page);
+  await expect(page).toHaveURL(/products/);
+  await expect(page.getByText('All Products')).toBeVisible();
+  await ProductsPage.addProductToCart(page, Products.searchProduct.name);
+  await HomePage.clickCartButton(page);
+  await expect(page).toHaveURL(/view_cart/);
+  await cartPage.verifyCartPage(page);
+  await cartPage.verifyProductInCart(page, Products.searchProduct.name);
+  await cartPage.removeProductFromCart(page, Products.searchProduct.name);
 });
 
