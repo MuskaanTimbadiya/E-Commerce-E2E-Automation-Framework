@@ -71,4 +71,42 @@ export class HomePage {
     await homeLocators.cartButton(page).last().click();
     await expect(page).toHaveURL(/view_cart/);
   }
+
+  static async clickCategoryLink(page, categoryName) {
+    await page.locator(`.category-products a:text-is("${categoryName}")`).click();
+  }
+  static async verifyCategoryProductsPage(page, categoryName) {
+    await expect(page.getByText(`Category - ${categoryName}`)).toBeVisible();
+  }
+  static async clickSubCategoryLink(page, subCategoryName) {
+    await page.getByRole('link', { name: subCategoryName }).first().click();
+    await expect(page).toHaveURL(/category_products\/\d+/);
+  }
+
+  static async navigateToBrandsSection(page) {
+    await page.locator('.brands_products h2:text-is("Brands")').scrollIntoViewIfNeeded();
+    await expect(page.locator('.brands_products h2:text-is("Brands")')).toBeVisible();
+  }
+  static async clickBrandLink(page, brandName) {
+    await page.getByRole('link', { name: brandName }).click();
+    await expect(page).toHaveURL(new RegExp(`/brand_products/${brandName}`));
+  }
+  static async verifyBrandProductsPage(page, brandName) {
+    await expect(page.getByText(`Brand - ${brandName}`)).toBeVisible();
+  }
+  static async scrollToRecommendedItemsSection(page) {
+    await page.locator('#recommended-item-carousel').scrollIntoViewIfNeeded();
+    await expect(page.locator('#recommended-item-carousel')).toBeVisible();
+  }
+  static async clickRecommendedItemViewProductButton(page) {
+    const recommendedItem = page.locator('#recommended-item-carousel .item').first();
+    await recommendedItem.locator('a:has-text("View Product")').click();
+    await expect(page).toHaveURL(/product_details\/\d+/);
+  }
+  static async clickRecommendedItemAddToCartButton(page) {
+    const recommendedItem = page.locator('#recommended-item-carousel .item').first();
+    await recommendedItem.locator('a:has-text("Add to cart")').click();
+    await expect(page).toHaveURL(/view_cart/);
+  }
 }
+

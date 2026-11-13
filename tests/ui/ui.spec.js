@@ -144,3 +144,66 @@ test('User removes product from cart', async ({ page }) => {
   await cartPage.removeProductFromCart(page, Products.searchProduct.name);
 });
 
+test('User can view category products',async ({ page }) =>{
+  await HomePage.clickCategoryLink(page, 'Women');
+  await HomePage.clickSubCategoryLink(page, 'Dress');
+  await expect(page.getByText('Women - Dress Products')).toBeVisible();
+  await HomePage.clickCategoryLink(page, 'Men');
+  await HomePage.clickSubCategoryLink(page, 'Tshirts');
+  await expect(page.getByText('Men - Tshirts Products')).toBeVisible();
+
+});
+
+test('User can view brands products',async ({ page }) =>{
+  await HomePage.clickProductsLink(page);
+  await expect(page).toHaveURL(/products/);
+  await expect(page.getByText('All Products')).toBeVisible();
+  await HomePage.navigateToBrandsSection(page);
+  await HomePage.clickBrandLink(page, 'Polo');
+  await HomePage.verifyBrandProductsPage(page, 'Polo');
+  await HomePage.clickBrandLink(page, 'H&M');
+  await HomePage.verifyBrandProductsPage(page, 'H&M');
+});
+
+test('User can search product and verify post login', async ({ page }) => {
+  const user = userData.signedin;  
+  await HomePage.clickProductsLink(page);
+  await expect(page).toHaveURL(/products/);
+  await expect(page.getByText('All Products')).toBeVisible();
+  await ProductsPage.searchProduct(page, Products.searchProduct.name);
+  await ProductsPage.verifySearchedProducts(page, Products.searchProduct.name);
+  await ProductsPage.addProductToCart(page, Products.searchProduct.name);
+  await HomePage.clickCartButton(page);
+  await expect(page).toHaveURL(/view_cart/);
+  await cartPage.verifyCartPage(page);
+  await cartPage.verifyProductInCart(page, Products.searchProduct.name);
+  await HomePage.openSignupLogin(page);
+  await LoginPage.login(page, user.email, user.password);
+  await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
+  await HomePage.clickCartButton(page);
+  await expect(page).toHaveURL(/view_cart/);
+  await cartPage.verifyCartPage(page);
+  await cartPage.verifyProductInCart(page, Products.searchProduct.name);
+});
+
+test('User can add a review for a product', async ({ page }) => {
+  const user = {
+    ...userData,
+  }
+  await HomePage.clickProductsLink(page);
+  await expect(page).toHaveURL(/products/);
+  await expect(page.getByText('All Products')).toBeVisible();
+  await HomePage.clickViewProductButton(page);
+  await ProductsPage.addReview(page, user.review);
+  await expect(page.getByText('Thank you for your review.')).toBeVisible();
+});
+
+test('User can add to cart from recommended items', async ({ page }) => {
+  await HomePage.scrollToRecommendedItemsSection(page);
+  await HomePage.clickRecommendedItemAddToCartButton(page);
+  await expect(page.getByText('Added!')).toBeVisible();
+  await HomePage.clickCartButton(page);
+  await expect(page).toHaveURL(/view_cart/);
+  await cartPage.verifyCartPage(page);
+  await cartPage.verifyProductInCart(page);
+});

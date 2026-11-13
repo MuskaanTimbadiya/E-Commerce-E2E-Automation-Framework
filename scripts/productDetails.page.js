@@ -40,4 +40,12 @@ export class ProductsPage {
     const quantityInput = page.locator('#quantity');
     await quantityInput.fill(quantity.toString());
   } 
+
+  static async addReview(page, reviewData) {
+    await page.getByPlaceholder('Your Name').fill(reviewData.name);
+    await page.getByPlaceholder('Email Address').first().fill(reviewData.email);
+    await page.getByPlaceholder('Add Review Here!').fill(reviewData.review);
+    await page.getByRole('button', { name: 'Submit' }).click();
+    await expect(page.getByText('Thank you for your review.')).toBeVisible();
+  }
 }   

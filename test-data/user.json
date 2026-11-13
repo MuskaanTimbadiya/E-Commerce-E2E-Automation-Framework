@@ -43,5 +43,10 @@
   "cardNumber": "4111111111111111",
   "cvv": "123",
   "expirationMonth": "12",
-  "expirationYear": "2025"
+  "expirationYear": "2025",
+  "review": {
+    "name": "Test User",
+    "email": "testing@review.com",
+    "review": "This is a test review for the product."
+  }
 }
