@@ -105,8 +105,19 @@ export class HomePage {
   }
   static async clickRecommendedItemAddToCartButton(page) {
     const recommendedItem = page.locator('#recommended-item-carousel .item').first();
-    await recommendedItem.locator('a:has-text("Add to cart")').click();
-    await expect(page).toHaveURL(/view_cart/);
+    await recommendedItem.locator('a:has-text("Add to cart")').first().click();
+  }
+
+  static async clickViewCartButtonFromModal(page) {
+    const modal = page.locator('#cartModal');
+    await expect(modal).toBeVisible();
+    await modal.locator('a:has-text("View Cart")').click();
+  }
+
+  static async scrollToTopWithArrowButtons(page) {
+    await page.evaluate(() => { window.scrollTo(0, document.body.scrollHeight); });
+    await expect(homeLocators.upwardArrowButton(page)).toBeVisible();
+    await homeLocators.upwardArrowButton(page).click();
   }
 }
 

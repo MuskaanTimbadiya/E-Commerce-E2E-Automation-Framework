@@ -28,7 +28,13 @@
     "cardNumber": "4111111111111111",
     "cvv": "123",
     "expirationMonth": "12",
-    "expirationYear": "2025"
+    "expirationYear": "2025",
+    "address": "680 Folsom St",
+    "address2": "10",
+    "country": "United States",
+    "state": "California",
+    "city": "San Fransisco",
+    "zipcode": "94107"
 
   },
   "contactUs": {

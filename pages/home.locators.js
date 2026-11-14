@@ -34,4 +34,6 @@ export const homeLocators = {
     page.getByText('You have been successfully subscribed!'),
   cartButton: (/** @type {import('@playwright/test').Page} */ page) =>
     page.getByRole('link', { name: 'Cart' }),
+  upwardArrowButton: (/** @type {import('@playwright/test').Page} */ page) =>
+    page.locator('#scrollUp'),
 };

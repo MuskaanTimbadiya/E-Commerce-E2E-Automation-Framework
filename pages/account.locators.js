@@ -15,4 +15,6 @@ export const accountLocators = {
     /** @type {import('@playwright/test').Page} */ page,
     /** @type {string} */ name,
   ) => page.getByText(`Logged in as ${name}`),
+  downloadInvoiceButton: (/** @type {import('@playwright/test').Page} */ page) =>
+    page.getByRole('link', { name: 'Download Invoice' }), 
 };

@@ -97,3 +97,24 @@ test('User can login before checkout and place order', async ({ page }) => {
     await expect(page).toHaveURL(/automationexercise\.com/);
 });
 
+test('User can download invoice after order is placed', async ({ page }) => {
+    const user = userData.signedin; 
+    await HomePage.openSignupLogin(page);
+    await LoginPage.login(page, user.email, user.password);
+    await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
+    await HomePage.clickProductsLink(page);
+    await expect(page).toHaveURL(/products/);
+    await ProductsPage.addProductToCart(page, Products.searchProduct.name);
+    await HomePage.clickCartButton(page);
+    await expect(page).toHaveURL(/view_cart/);
+    await cartPage.verifyCartPage(page);
+    await cartPage.verifyProductInCart(page, Products.searchProduct.name);
+    await cartPage.proceedToCheckout(page);
+    await cartPage.placeOrder(page, user);
+    await AccountPage.downloadInvoice(page);
+    await AccountPage.deleteAccount(page);
+    await expect(AccountPage.accountDeletedMessage(page)).toBeVisible();
+    await AccountPage.continue(page);
+    await expect(page).toHaveURL(/automationexercise\.com/);
+});
+

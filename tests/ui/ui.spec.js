@@ -201,9 +201,30 @@ test('User can add a review for a product', async ({ page }) => {
 test('User can add to cart from recommended items', async ({ page }) => {
   await HomePage.scrollToRecommendedItemsSection(page);
   await HomePage.clickRecommendedItemAddToCartButton(page);
-  await expect(page.getByText('Added!')).toBeVisible();
-  await HomePage.clickCartButton(page);
+  await HomePage.clickViewCartButtonFromModal(page);
   await expect(page).toHaveURL(/view_cart/);
   await cartPage.verifyCartPage(page);
   await cartPage.verifyProductInCart(page);
+});
+
+test('User verify address details in checkout page', async ({ page }) => {
+  const user = userData.signedin;
+  await HomePage.openSignupLogin(page);
+  await LoginPage.login(page, user.email, user.password);
+  await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
+  await HomePage.clickProductsLink(page);
+  await expect(page).toHaveURL(/products/);
+  await expect(page.getByText('All Products')).toBeVisible();
+  await ProductsPage.addProductToCart(page, Products.searchProduct.name);
+  await HomePage.clickCartButton(page);
+  await expect(page).toHaveURL(/view_cart/);
+  await cartPage.verifyCartPage(page);
+  await cartPage.verifyProductInCart(page, Products.searchProduct.name);
+  await cartPage.proceedToCheckout(page);
+  await cartPage.verifyAddressDetailsInCheckout(page, user);
+});
+
+test ('User can scroll to top and bottom of the page using Arrow buttons', async ({ page }) => {
+  await HomePage.scrollToTopWithArrowButtons(page);
+  await expect(page.getByRole('link', { name: 'Home' })).toBeVisible();
 });

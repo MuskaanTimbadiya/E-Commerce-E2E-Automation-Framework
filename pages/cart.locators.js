@@ -28,5 +28,7 @@ export const cartLocators = {
     submitOrderButton: (/** @type {import('@playwright/test').Page} */ page) =>
         page.getByRole('button', { name: 'Pay and Confirm Order' }),
     removeProductButton: (/** @type {import('@playwright/test').Page} */ page, productName) =>
-        page.locator('tr').filter({ hasText: productName }).locator('a.cart_quantity_delete'),  
+        page.locator('tr').filter({ hasText: productName }).locator('a.cart_quantity_delete'),
+    addressDetails: (/** @type {import('@playwright/test').Page} */ page) =>
+        page.locator('.address').first(),  
 };  

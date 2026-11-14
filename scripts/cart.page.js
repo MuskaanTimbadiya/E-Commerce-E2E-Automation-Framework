@@ -42,5 +42,11 @@ export class cartPage {
         const productRow = cartLocators.cartProductName(page, productName);
         await expect(productRow).not.toBeVisible();
     }
+    static async verifyAddressDetailsInCheckout(page, user) {
+        await expect(cartLocators.addressDetails(page)).toContainText(user.address);
+        await expect(cartLocators.addressDetails(page)).toContainText(user.city);
+        await expect(cartLocators.addressDetails(page)).toContainText(user.state);
+        await expect(cartLocators.addressDetails(page)).toContainText(user.zipcode);
+    }
 
 }   

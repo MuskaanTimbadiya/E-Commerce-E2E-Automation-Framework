@@ -36,4 +36,8 @@ export class AccountPage {
   static async logout(page) {
     await locators.logoutLink(page).click();
   }
+  /** @param {import('@playwright/test').Page} page */
+  static async downloadInvoice(page) {
+    await locators.downloadInvoiceButton(page).click();
+  }
 }
