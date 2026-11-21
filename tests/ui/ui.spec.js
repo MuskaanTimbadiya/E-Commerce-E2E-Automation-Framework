@@ -8,6 +8,7 @@ import userData from '../../test-data/user.json' with { type: 'json' };
 import Products from '../../test-data/products.json' with { type: 'json' };
 import { ProductsPage } from '../../scripts/productDetails.page';
 import { cartPage } from '../../scripts/cart.page';
+import { createAccountViaApi } from '../../utils/userApi.js';
 
 test.beforeEach(async ({ page }, testInfo) => {
   await page.goto('https://www.automationexercise.com/');
@@ -38,8 +39,8 @@ test('user can register and delete an account', async ({ page }) => {
   await expect(page).toHaveURL(/automationexercise\.com/);
 });
 
-test('User can login with valid credentials', async ({ page }) => {
-  const user = userData.signedin;  
+test('User can login with valid credentials', async ({ page, request }) => {
+  const user = await createAccountViaApi(request);  
   await HomePage.openSignupLogin(page);
   await LoginPage.login(page, user.email, user.password);
   await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
@@ -47,15 +48,15 @@ test('User can login with valid credentials', async ({ page }) => {
   await expect(page).toHaveURL(/login/);
 });
 
-test('User cannot login with invalid credentials', async ({ page }) => {
-  const user = userData.signedin;
+test('User cannot login with invalid credentials', async ({ page, request }) => {
+  const user = await createAccountViaApi(request);
   await HomePage.openSignupLogin(page);
   await LoginPage.login(page, user.email, user.wrongPassword);
   await expect(page.getByText('Your email or password is incorrect!')).toBeVisible();
 });
 
-test('User cannot create an account with an already registered email', async ({ page }) => {
-  const user = userData.signedin;
+test('User cannot create an account with an already registered email', async ({ page, request }) => {
+  const user = await createAccountViaApi(request);
   await HomePage.openSignupLogin(page);
   await LoginPage.signup(page, user.name, user.email);
   await expect(page.getByText('Email Address already exist!')).toBeVisible();
@@ -165,8 +166,8 @@ test('User can view brands products',async ({ page }) =>{
   await HomePage.verifyBrandProductsPage(page, 'H&M');
 });
 
-test('User can search product and verify post login', async ({ page }) => {
-  const user = userData.signedin;  
+test('User can search product and verify post login', async ({ page, request }) => {
+  const user = await createAccountViaApi(request);  
   await HomePage.clickProductsLink(page);
   await expect(page).toHaveURL(/products/);
   await expect(page.getByText('All Products')).toBeVisible();
@@ -207,8 +208,8 @@ test('User can add to cart from recommended items', async ({ page }) => {
   await cartPage.verifyProductInCart(page);
 });
 
-test('User verify address details in checkout page', async ({ page }) => {
-  const user = userData.signedin;
+test('User verify address details in checkout page', async ({ page, request }) => {
+  const user = await createAccountViaApi(request);
   await HomePage.openSignupLogin(page);
   await LoginPage.login(page, user.email, user.password);
   await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();

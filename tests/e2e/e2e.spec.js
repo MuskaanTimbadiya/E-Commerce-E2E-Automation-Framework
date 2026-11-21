@@ -7,6 +7,7 @@ import userData from '../../test-data/user.json' with { type: 'json' };
 import Products from '../../test-data/products.json' with { type: 'json' };
 import { ProductsPage } from '../../scripts/productDetails.page';
 import { cartPage } from '../../scripts/cart.page';
+import { createAccountViaApi } from '../../utils/userApi.js';
 
 test.beforeEach(async ({ page }, testInfo) => {
   await page.goto('https://www.automationexercise.com/');
@@ -77,8 +78,8 @@ test('User can place order after registering', async ({ page }) => {
     await expect(page).toHaveURL(/automationexercise\.com/);
 });
 
-test('User can login before checkout and place order', async ({ page }) => {
-    const user = userData.signedin; 
+test('User can login before checkout and place order', async ({ page, request }) => {
+    const user = await createAccountViaApi(request); 
     await HomePage.openSignupLogin(page);
     await LoginPage.login(page, user.email, user.password);
     await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
@@ -97,8 +98,8 @@ test('User can login before checkout and place order', async ({ page }) => {
     await expect(page).toHaveURL(/automationexercise\.com/);
 });
 
-test('User can download invoice after order is placed', async ({ page }) => {
-    const user = userData.signedin; 
+test('User can download invoice after order is placed', async ({ page, request }) => {
+    const user = await createAccountViaApi(request); 
     await HomePage.openSignupLogin(page);
     await LoginPage.login(page, user.email, user.password);
     await expect(AccountPage.loggedInAs(page, user.name)).toBeVisible();
@@ -117,4 +118,3 @@ test('User can download invoice after order is placed', async ({ page }) => {
     await AccountPage.continue(page);
     await expect(page).toHaveURL(/automationexercise\.com/);
 });
-

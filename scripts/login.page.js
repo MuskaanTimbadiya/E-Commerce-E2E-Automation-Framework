@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
 import loginLocators from '../pages/login.json' with { type: 'json' };
+import { createAccountViaApi } from '../utils/userApi.js';
 
 export class LoginPage {
   /**
@@ -21,5 +22,14 @@ export class LoginPage {
     await page.locator(loginLocators.loginEmailInput).fill(email);
     await page.locator(loginLocators.loginPasswordInput).fill(password);
     await page.locator(loginLocators.loginButton).click();
+  }
+
+  /**
+   * Helper to create a user account via createAccount API before signing in.
+   * @param {import('@playwright/test').APIRequestContext} [request]
+   * @param {Record<string, any>} [overrides]
+   */
+  static async createAccountViaApi(request, overrides) {
+    return createAccountViaApi(request, overrides);
   }
 }
