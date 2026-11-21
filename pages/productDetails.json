@@ -17,7 +17,7 @@
   "reviewNameInput": "input[placeholder='Your Name']",
   "reviewEmailInput": "input[placeholder='Email Address']",
   "reviewTextInput": "[placeholder='Add Review Here!']",
-  "reviewSubmitButton": "role=button[name='Submit']",
+  "reviewSubmitButton": "button:has-text('Submit')",
   "reviewSuccessMessage": "text=Thank you for your review."
 }
 

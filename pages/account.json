@@ -1,10 +1,9 @@
 {
-  "deleteAccountLink": "a:has-text('Delete Account')",
-  "continueLink": "role=link[name='Continue']",
-  "logoutLink": "role=link[name='Logout']",
+  "deleteAccountLink": "a[href='/delete_account']",
+  "continueLink": "a:has-text('Continue'), [data-qa='continue-button']",
+  "logoutLink": "a[href='/logout']",
   "accountCreatedMessage": "text=Congratulations! Your new",
   "accountDeletedMessage": "text=Account Deleted!",
   "loggedInAs": "text=Logged in as {name}",
-  "downloadInvoiceButton": "role=link[name='Download Invoice']"
+  "downloadInvoiceButton": "a:has-text('Download Invoice')"
 }
-
