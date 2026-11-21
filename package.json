@@ -2,8 +2,11 @@
   "name": "e-commerce-e2e-automation-framework",
   "version": "1.0.0",
   "description": "A production-style automation framework for an e-commerce app",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "dashboard": "node dashboard/server.js",
+    "start": "node dashboard/server.js",
     "test": "playwright test",
     "test:e2e": "playwright test tests/e2e",
     "test:ui": "playwright test tests/ui",

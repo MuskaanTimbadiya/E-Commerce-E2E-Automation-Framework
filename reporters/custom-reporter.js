@@ -179,6 +179,11 @@ export default class CustomHtmlReporter {
   }
 
   async onEnd(result) {
+    // If no tests were executed (e.g. --list or filter matched nothing), do not overwrite existing report
+    if (this.tests.length === 0) {
+      return;
+    }
+
     this.endTime = Date.now();
     const duration = this.endTime - (this.startTime || this.endTime);
 
