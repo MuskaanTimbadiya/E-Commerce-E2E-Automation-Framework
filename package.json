@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "A production-style automation framework for an e-commerce app",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "report:open": "open reports/index.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

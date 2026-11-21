@@ -7,7 +7,10 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['./reporters/custom-reporter.js', { outputFile: 'reports/index.html' }],
+  ],
   timeout: 60000,
   use: {
     headless: false,
