@@ -1,0 +1,15 @@
+{
+  "signupForm": "form:has-text('Signup')",
+  "signupNameInput": "form:has-text('Signup') input[placeholder='Name']",
+  "signupEmailInput": "form:has-text('Signup') input[placeholder='Email Address']",
+  "signupButton": "form:has-text('Signup') button:has-text('Signup')",
+  "loginForm": "form:has-text('Login')",
+  "loginEmailInput": "form:has-text('Login') input[placeholder='Email Address']",
+  "loginPasswordInput": "form:has-text('Login') input[placeholder='Password']",
+  "loginButton": "form:has-text('Login') button:has-text('Login')",
+  "signupFormTitle": "text=ENTER ACCOUNT INFORMATION",
+  "newUserSignupHeader": "text=New User Signup!",
+  "loginErrorMessage": "text=Your email or password is incorrect!",
+  "signupErrorMessage": "text=Email Address already exist!"
+}
+

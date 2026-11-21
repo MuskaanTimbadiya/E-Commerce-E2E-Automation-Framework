@@ -1,22 +1,24 @@
 import { expect } from '@playwright/test';
+import productDetailsLocators from '../pages/productDetails.json' with { type: 'json' };
 
 export class ProductsPage {
   static async verifyProductDetails(page) {
-    await expect(page.locator('.product-information')).toBeVisible();
-    await expect(page.getByText('Category:')).toBeVisible();
-    await expect(page.locator('.product-information span span')).toBeVisible();
-    await expect(page.getByText('Availability:')).toBeVisible();
-    await expect(page.getByText('Condition:')).toBeVisible();
-    await expect(page.getByText('Brand:')).toBeVisible();
+    await expect(page.locator(productDetailsLocators.productInformation)).toBeVisible();
+    await expect(page.locator(productDetailsLocators.categoryText)).toBeVisible();
+    await expect(page.locator(productDetailsLocators.productPrice)).toBeVisible();
+    await expect(page.locator(productDetailsLocators.availabilityText)).toBeVisible();
+    await expect(page.locator(productDetailsLocators.conditionText)).toBeVisible();
+    await expect(page.locator(productDetailsLocators.brandText)).toBeVisible();
   }
+
   static async searchProduct(page, productName) {
-    await page.fill('#search_product', productName);
-    await page.click('#submit_search');
+    await page.locator(productDetailsLocators.searchInput).fill(productName);
+    await page.locator(productDetailsLocators.searchButton).click();
   }
   
   static async verifySearchedProducts(page, productName) {
-    await expect(page.getByText('Searched Products')).toBeVisible();
-    await expect(page.locator('.productinfo')).toContainText(productName);
+    await expect(page.locator(productDetailsLocators.searchedProductsTitle)).toBeVisible();
+    await expect(page.locator(productDetailsLocators.productInfo)).toContainText(productName);
   }
 
   static async addProductToCart(page, productName) {
@@ -26,26 +28,26 @@ export class ProductsPage {
   }
 
   static async clickaddToCartButton(page, productName) {
-    const productCard = page.locator('.productinfo').filter({ hasText: productName });
+    const productCard = page.locator(productDetailsLocators.productCard.replace('{productName}', productName));
     await productCard.locator('a').click();
-    await expect(page.getByText('Added!')).toBeVisible();
+    await expect(page.locator(productDetailsLocators.addedModalMessage)).toBeVisible();
   }
 
   static async clickaddToCart(page) {
-    await page.locator('.fa.fa-shopping-cart').last().click();
-    await expect(page.getByText('Added!')).toBeVisible();
+    await page.locator(productDetailsLocators.cartIconAddToCartButton).last().click();
+    await expect(page.locator(productDetailsLocators.addedModalMessage)).toBeVisible();
   }
 
   static async increaseProductQuantity(page, quantity) {
-    const quantityInput = page.locator('#quantity');
+    const quantityInput = page.locator(productDetailsLocators.quantityInput);
     await quantityInput.fill(quantity.toString());
   } 
 
   static async addReview(page, reviewData) {
-    await page.getByPlaceholder('Your Name').fill(reviewData.name);
-    await page.getByPlaceholder('Email Address').first().fill(reviewData.email);
-    await page.getByPlaceholder('Add Review Here!').fill(reviewData.review);
-    await page.getByRole('button', { name: 'Submit' }).click();
-    await expect(page.getByText('Thank you for your review.')).toBeVisible();
+    await page.locator(productDetailsLocators.reviewNameInput).fill(reviewData.name);
+    await page.locator(productDetailsLocators.reviewEmailInput).first().fill(reviewData.email);
+    await page.locator(productDetailsLocators.reviewTextInput).fill(reviewData.review);
+    await page.locator(productDetailsLocators.reviewSubmitButton).click();
+    await expect(page.locator(productDetailsLocators.reviewSuccessMessage)).toBeVisible();
   }
-}   
+}

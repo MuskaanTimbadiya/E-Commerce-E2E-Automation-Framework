@@ -1,0 +1,23 @@
+{
+  "productInformation": ".product-information",
+  "categoryText": "text=Category:",
+  "productPrice": ".product-information span span",
+  "availabilityText": "text=Availability:",
+  "conditionText": "text=Condition:",
+  "brandText": "text=Brand:",
+  "searchInput": "#search_product",
+  "searchButton": "#submit_search",
+  "searchedProductsTitle": "text=Searched Products",
+  "productInfo": ".productinfo",
+  "productCard": ".productinfo:has-text('{productName}')",
+  "productCardAddToCart": ".productinfo:has-text('{productName}') a",
+  "cartIconAddToCartButton": ".fa.fa-shopping-cart",
+  "addedModalMessage": "text=Added!",
+  "quantityInput": "#quantity",
+  "reviewNameInput": "input[placeholder='Your Name']",
+  "reviewEmailInput": "input[placeholder='Email Address']",
+  "reviewTextInput": "[placeholder='Add Review Here!']",
+  "reviewSubmitButton": "role=button[name='Submit']",
+  "reviewSuccessMessage": "text=Thank you for your review."
+}
+

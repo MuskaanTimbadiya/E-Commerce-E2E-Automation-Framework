@@ -1,0 +1,21 @@
+{
+  "cartButton": "role=link[name='Cart']",
+  "cartPageTitle": "text=Shopping Cart",
+  "cartTable": ".cart_info",
+  "cartProductName": ".cart_info:has-text('{productName}')",
+  "cartProductQuantity": "#product-1 .cart_price p",
+  "cartProductPrice": ".cart_info td:nth-child(4)",
+  "proceedToCheckoutButton": ".btn.btn-default.check_out:has-text('Proceed To Checkout')",
+  "registerLoginLink": "role=link[name='Register / Login']",
+  "placeOrderButton": ".btn.btn-default.check_out:has-text('Place Order')",
+  "nameInput": "input[name='name_on_card']",
+  "cardNumberInput": "input[name='card_number']",
+  "cvvInput": "input[name='cvc']",
+  "expirationDateInput": "input[name='expiry_month']",
+  "expirationYearInput": "input[name='expiry_year']",
+  "submitOrderButton": "role=button[name='Pay and Confirm Order']",
+  "removeProductButton": "tr:has-text('{productName}') a.cart_quantity_delete",
+  "addressDetails": ".address",
+  "orderPlacedMessage": "text=Congratulations! Your order has been confirmed!"
+}
+

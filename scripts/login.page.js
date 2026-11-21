@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { loginLocators } from '../pages/login.locators.js';
+import loginLocators from '../pages/login.json' with { type: 'json' };
 
 export class LoginPage {
   /**
@@ -8,17 +8,18 @@ export class LoginPage {
    * @param {string} email
    */
   static async signup(page, name, email) {
-    await loginLocators.signupNameInput(page).fill(name);
-    await loginLocators.signupEmailInput(page).fill(email);
-    await loginLocators.signupButton(page).click();
+    await page.locator(loginLocators.signupNameInput).fill(name);
+    await page.locator(loginLocators.signupEmailInput).fill(email);
+    await page.locator(loginLocators.signupButton).click();
   }
 
   static async verifySignupForm(page) {
-    await expect(page.getByText('ENTER ACCOUNT INFORMATION')).toBeVisible();
+    await expect(page.locator(loginLocators.signupFormTitle)).toBeVisible();
   }
+
   static async login(page, email, password) {
-    await loginLocators.loginEmailInput(page).fill(email);
-    await loginLocators.loginPasswordInput(page).fill(password);
-    await loginLocators.loginButton(page).click();
+    await page.locator(loginLocators.loginEmailInput).fill(email);
+    await page.locator(loginLocators.loginPasswordInput).fill(password);
+    await page.locator(loginLocators.loginButton).click();
   }
 }

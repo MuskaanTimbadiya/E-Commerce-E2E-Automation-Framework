@@ -1,6 +1,6 @@
 // @ts-check
 
-import { accountInformationLocators as locators } from '../pages/account-information.locators.js';
+import locators from '../pages/account-information.json' with { type: 'json' };
 
 export class AccountInformationPage {
   /**
@@ -23,23 +23,23 @@ export class AccountInformationPage {
    * }} user
    */
   static async completeAccountDetails(page, user) {
-    await locators.mrsRadio(page).check();
-    await locators.passwordInput(page).fill(user.password);
-    await locators.daysSelect(page).selectOption(user.dateOfBirth.day);
-    await locators.monthsSelect(page).selectOption(user.dateOfBirth.month);
-    await locators.yearsSelect(page).selectOption(user.dateOfBirth.year);
-    if (user.newsletter) await locators.newsletterCheckbox(page).check();
-    if (user.specialOffers) await locators.specialOffersCheckbox(page).check();
-    await locators.firstNameInput(page).fill(user.firstName);
-    await locators.lastNameInput(page).fill(user.lastName);
-    await locators.companyInput(page).fill(user.company);
-    await locators.addressInput(page).fill(user.address);
-    await locators.address2Input(page).fill(user.address2);
-    await locators.countrySelect(page).selectOption(user.country);
-    await locators.stateInput(page).fill(user.state);
-    await locators.cityInput(page).fill(user.city);
-    await locators.zipcodeInput(page).fill(user.zipcode);
-    await locators.mobileInput(page).fill(user.mobile);
-    await locators.createAccountButton(page).click();
+    await page.locator(locators.mrsRadio).check();
+    await page.locator(locators.passwordInput).fill(user.password);
+    await page.locator(locators.daysSelect).selectOption(user.dateOfBirth.day);
+    await page.locator(locators.monthsSelect).selectOption(user.dateOfBirth.month);
+    await page.locator(locators.yearsSelect).selectOption(user.dateOfBirth.year);
+    if (user.newsletter) await page.locator(locators.newsletterCheckbox).check();
+    if (user.specialOffers) await page.locator(locators.specialOffersCheckbox).check();
+    await page.locator(locators.firstNameInput).fill(user.firstName);
+    await page.locator(locators.lastNameInput).fill(user.lastName);
+    await page.locator(locators.companyInput).fill(user.company);
+    await page.locator(locators.addressInput).fill(user.address);
+    await page.locator(locators.address2Input).fill(user.address2);
+    await page.locator(locators.countrySelect).selectOption(user.country);
+    await page.locator(locators.stateInput).fill(user.state);
+    await page.locator(locators.cityInput).fill(user.city);
+    await page.locator(locators.zipcodeInput).fill(user.zipcode);
+    await page.locator(locators.mobileInput).fill(user.mobile);
+    await page.locator(locators.createAccountButton).click();
   }
 }

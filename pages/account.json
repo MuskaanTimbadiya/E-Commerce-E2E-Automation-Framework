@@ -1,0 +1,10 @@
+{
+  "deleteAccountLink": "a:has-text('Delete Account')",
+  "continueLink": "role=link[name='Continue']",
+  "logoutLink": "role=link[name='Logout']",
+  "accountCreatedMessage": "text=Congratulations! Your new",
+  "accountDeletedMessage": "text=Account Deleted!",
+  "loggedInAs": "text=Logged in as {name}",
+  "downloadInvoiceButton": "role=link[name='Download Invoice']"
+}
+
