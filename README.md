@@ -23,6 +23,7 @@ A production-grade, enterprise-ready end-to-end automation framework built for r
 8. [CLI Execution Commands](#cli-execution-commands)
 9. [Agentic Threat Modeling & Security Directives](#agentic-threat-modeling--security-directives)
 10. [Google Cloud Run & Cloud Native Deployment Guide](#google-cloud-run--cloud-native-deployment-guide)
+11. [CI/CD Integration & GitHub Actions Workflow](#cicd-integration--github-actions-workflow)
 
 ---
 
@@ -369,6 +370,56 @@ Every feature, page class, runner control, and reporter feature has been thoroug
 * **API Dynamic User Seeding**: Verified account provisioning and order placement without static credential drift.
 * **Executive HTML Audit Report**: Verified zero process hangs, Base64 screenshot embeddings, and pure-SVG donut rendering.
 * **Interactive Dashboard**: Verified real-time SSE log streaming, single-scenario isolated execution (`-g`), and live parameter synchronization.
+
+---
+
+## CI/CD Integration & GitHub Actions Workflow
+
+The framework includes a fully automated, production-hardened **GitHub Actions workflow** ([`.github/workflows/playwright.yml`](file:///.github/workflows/playwright.yml)):
+
+### Key Pipeline Features:
+* **Automated CI/CD Verification**: Executes on every `push` and `pull_request` targeting `main` or `master`.
+* **Headless Auto-Detection**: Dynamic evaluation of `headless: !!process.env.CI` in `playwright.config.js` ensures reliable execution across Ubuntu Linux runners without requiring a physical or virtual display server.
+* **Native GitHub Annotations**: Ingests Playwright's native `github` reporter in CI to provide inline annotations on Pull Request diffs and workflow logs.
+* **Executive Quality Audit Upload**: Automatically packages and uploads the MNC Executive HTML report (`reports/index.html`) and failure traces (`test-results/`) as workflow artifacts with a 30-day retention window.
+* **Deterministic Dependency Caching**: Caches `npm` packages keyed against `package-lock.json` for rapid pipeline execution.
+
+```yaml
+# .github/workflows/playwright.yml
+name: Playwright Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npx playwright test
+    - name: Upload Test Report & Artifacts
+      uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: executive-audit-report
+        path: |
+          reports/
+          test-results/
+        retention-days: 30
+```
 
 ---
 

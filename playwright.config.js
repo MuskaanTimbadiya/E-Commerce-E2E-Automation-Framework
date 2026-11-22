@@ -10,10 +10,11 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['./reporters/custom-reporter.js', { outputFile: 'reports/index.html' }],
+    ...(process.env.CI ? [['github'], ['junit', { outputFile: 'results.xml' }]] : []),
   ],
   timeout: 60000,
   use: {
-    headless: false,
+    headless: !!process.env.CI,
     trace: 'retain-on-failure',
     screenshot: 'on',
   },
