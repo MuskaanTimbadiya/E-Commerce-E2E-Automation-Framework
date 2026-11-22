@@ -8,6 +8,8 @@
     "dashboard": "node dashboard/server.js",
     "start": "node dashboard/server.js",
     "test": "playwright test",
+    "test:api": "playwright test tests/api/api.spec.js --project=chromium",
+    "test:smoke": "playwright test tests/e2e/e2e.spec.js --project=chromium",
     "test:e2e": "playwright test tests/e2e",
     "test:ui": "playwright test tests/ui",
     "test:api": "playwright test tests/api",

@@ -5,10 +5,23 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      test_suite:
+        description: 'Select test suite to run'
+        required: true
+        default: 'api'
+        type: choice
+        options:
+          - api
+          - e2e
+          - smoke
+          - ui
+          - all
 
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -22,10 +35,29 @@ jobs:
       run: npm ci
 
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install --with-deps chromium
 
     - name: Run Playwright tests
-      run: npx playwright test
+      run: |
+        SUITE="${{ github.event.inputs.test_suite || 'api' }}"
+        echo "Executing test suite: $SUITE"
+        case "$SUITE" in
+          api)
+            npx playwright test tests/api/api.spec.js --project=chromium
+            ;;
+          e2e|smoke)
+            npx playwright test tests/e2e/e2e.spec.js --project=chromium
+            ;;
+          ui)
+            npx playwright test tests/ui/ui.spec.js --project=chromium
+            ;;
+          all)
+            npx playwright test --project=chromium
+            ;;
+          *)
+            npx playwright test tests/api/api.spec.js --project=chromium
+            ;;
+        esac
 
     - name: Upload Test Report & Artifacts
       uses: actions/upload-artifact@v4

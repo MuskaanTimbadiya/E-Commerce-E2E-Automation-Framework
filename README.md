@@ -94,10 +94,9 @@ This framework implements an enterprise **Page Object Model (POM)** pattern enha
 │   └── product-details.page.js    # Product & catalog actions
 ├── test-data/                     # Test Fixtures & Static Payloads
 │   └── user.json                  # Baseline user demographic attributes
-├── tests/                         # Playwright Test Suites (40 Scenarios)
+├── tests/                         # Playwright Test Suites (38 Scenarios)
 │   ├── api/api.spec.js            # Backend API contracts (14 tests)
 │   ├── e2e/e2e.spec.js            # Multi-step checkout & orders (4 tests)
-│   ├── example.spec.js            # Baseline smoke specs (2 tests)
 │   └── ui/ui.spec.js              # UI regression scenarios (20 tests)
 ├── utils/                         # Shared Utilities & API Helpers
 │   ├── api.js                     # Common API exports
@@ -117,7 +116,6 @@ The framework provides comprehensive test coverage across 40 distinct scenarios:
 | [tests/e2e/e2e.spec.js](file:///Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/e2e/e2e.spec.js) | **E2E Flow** | 4 | Complete guest/registered order placement, invoice PDF download, multi-step checkout. |
 | [tests/ui/ui.spec.js](file:///Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/ui/ui.spec.js) | **UI Regression** | 20 | Authentication validation, duplicate account prevention, cart quantity editing, address verification, category browsing, product review submission, recommended items. |
 | [tests/api/api.spec.js](file:///Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/api/api.spec.js) | **API Contract** | 14 | Products list validation, brands verification, product search endpoints, credential authentication APIs, user creation/update/deletion endpoints. |
-| [tests/example.spec.js](file:///Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js) | **Functional** | 2 | Smoke verification and accessibility anchors. |
 
 ---
 
@@ -193,7 +191,9 @@ npx playwright install --with-deps
 | Command | Purpose |
 | :--- | :--- |
 | `npm run dashboard` | Launches the interactive local scenario execution web dashboard on `http://127.0.0.1:4000` |
-| `npm test` | Executes all 40 scenarios across all configured browser projects |
+| `npm run test:api` | Runs backend REST API contract test suite (14 tests on Chromium) |
+| `npm run test:smoke` | Runs high-priority smoke suite (4 core checkout E2E scenarios on Chromium) |
+| `npm test` | Executes all 38 scenarios across all configured browser projects |
 | `npm run test:e2e` | Runs E2E checkout and order placement flows (`tests/e2e`) |
 | `npm run test:ui` | Runs UI regression scenarios (`tests/ui`) |
 | `npm run test:api` | Runs backend API contract validation suites (`tests/api`) |
@@ -393,10 +393,18 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      test_suite:
+        description: 'Select test suite to run'
+        required: true
+        default: 'api'
+        type: choice
+        options: [api, e2e, smoke, ui, all]
 
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -407,9 +415,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run: npx playwright install --with-deps chromium
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test tests/api/api.spec.js --project=chromium
     - name: Upload Test Report & Artifacts
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
