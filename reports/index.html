@@ -1036,17 +1036,17 @@
           <h2>Global Core E-Commerce Platform</h2>
           <h1>Enterprise Quality Assurance &amp; Automation Audit</h1>
           <div class="sub-meta">
-            <span>Environment: <strong>CI/CD STAGING</strong></span>
+            <span>Environment: <strong>QA-E2E PRE-PROD</strong></span>
             <span>&bull;</span>
-            <span>Audit Date: <strong>Sun, 22 Nov 2026 11:11:25 GMT</strong></span>
+            <span>Audit Date: <strong>Sun, 22 Nov 2026 11:46:57 GMT</strong></span>
             <span>&bull;</span>
-            <span>Suite Runtime: <strong>4.8s</strong></span>
+            <span>Suite Runtime: <strong>11.6s</strong></span>
           </div>
         </div>
       </div>
 
       <div class="header-actions">
-        <div class="quality-gate-badge failed">&#9888; QUALITY GATE: ACTION REQUIRED (6 DEFECTS)</div>
+        <div class="quality-gate-badge passed">&#10004; QUALITY GATE: PASSED (SLA MET)</div>
         <button class="btn-action" id="themeToggleBtn">
           <span id="themeIcon">&#9728;</span>
           <span id="themeLabel">Light Mode</span>
@@ -1074,7 +1074,7 @@
       </div>
       <div class="meta-item">
         <span class="label">Pipeline Trigger</span>
-        <span class="value">Automated Scheduled Build</span>
+        <span class="value">Developer / QA Local Trigger</span>
       </div>
     </div>
 
@@ -1085,11 +1085,11 @@
       </button>
       <button class="tab-btn" data-tab="tab-scenarios">
         <span>Test Scenarios</span>
-        <span class="tab-badge">6</span>
+        <span class="tab-badge">14</span>
       </button>
       <button class="tab-btn" data-tab="tab-defects">
         <span>Defect Center (RCA)</span>
-        <span class="tab-badge danger">6</span>
+        <span class="tab-badge ">0</span>
       </button>
       <button class="tab-btn" data-tab="tab-environment">
         <span>Environment &amp; Setup</span>
@@ -1106,27 +1106,27 @@
               <circle class="donut-bg" cx="50" cy="50" r="44"/>
               <!-- Pass segment -->
               <circle class="donut-segment pass" cx="50" cy="50" r="44"
-                stroke-dasharray="0 276.46" stroke-dashoffset="0"/>
+                stroke-dasharray="276.46 276.46" stroke-dashoffset="0"/>
               <!-- Fail segment -->
               <circle class="donut-segment fail" cx="50" cy="50" r="44"
-                stroke-dasharray="276.46 276.46" stroke-dashoffset="0"/>
+                stroke-dasharray="0 276.46" stroke-dashoffset="-276.46"/>
               <!-- Flaky/Skip segment -->
               <circle class="donut-segment skip" cx="50" cy="50" r="44"
                 stroke-dasharray="0 276.46" stroke-dashoffset="-276.46"/>
             </svg>
             <div class="donut-center-text">
-              <div class="donut-percent">0%</div>
+              <div class="donut-percent">100%</div>
               <div class="donut-label">Pass Rate</div>
             </div>
           </div>
           <div class="donut-legend">
             <div class="legend-item">
               <span class="legend-color" style="background: var(--status-pass)"></span>
-              <span>Passed: <strong>0</strong></span>
+              <span>Passed: <strong>14</strong></span>
             </div>
             <div class="legend-item">
               <span class="legend-color" style="background: var(--status-fail)"></span>
-              <span>Failed: <strong>6</strong></span>
+              <span>Failed: <strong>0</strong></span>
             </div>
             <div class="legend-item">
               <span class="legend-color" style="background: var(--status-skip)"></span>
@@ -1138,18 +1138,18 @@
         <div class="kpi-metric-cards">
           <div class="kpi-card">
             <div class="kpi-title">Total Scenarios</div>
-            <div class="kpi-num">6</div>
+            <div class="kpi-num">14</div>
             <div class="kpi-caption">1 Automated Suites</div>
           </div>
           <div class="kpi-card pass">
             <div class="kpi-title">Passed Scenarios</div>
-            <div class="kpi-num">0</div>
-            <div class="kpi-caption">0% compliance</div>
+            <div class="kpi-num">14</div>
+            <div class="kpi-caption">100% compliance</div>
           </div>
           <div class="kpi-card fail">
             <div class="kpi-title">Critical Defects</div>
-            <div class="kpi-num">6</div>
-            <div class="kpi-caption">100% failure rate</div>
+            <div class="kpi-num">0</div>
+            <div class="kpi-caption">0% failure rate</div>
           </div>
           <div class="kpi-card flaky">
             <div class="kpi-title">Flaky Scenarios</div>
@@ -1158,8 +1158,8 @@
           </div>
           <div class="kpi-card">
             <div class="kpi-title">Total Duration</div>
-            <div class="kpi-num" style="font-size: 22px;">4.8s</div>
-            <div class="kpi-caption">Avg: 796ms/test</div>
+            <div class="kpi-num" style="font-size: 22px;">11.6s</div>
+            <div class="kpi-caption">Avg: 826ms/test</div>
           </div>
         </div>
       </div>
@@ -1190,25 +1190,25 @@
           <tbody>
             
             <tr>
-              <td><strong style="font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js</strong></td>
-              <td><span class="tag-category">Functional Spec</span></td>
-              <td>6</td>
-              <td style="color: var(--status-pass); font-weight: 700;">0</td>
-              <td style="color: var(--status-fail); font-weight: 700;">6</td>
+              <td><strong style="font-family: ui-monospace, SFMono-Regular, monospace;">tests/api/api.spec.js</strong></td>
+              <td><span class="tag-category">API Contract</span></td>
+              <td>14</td>
+              <td style="color: var(--status-pass); font-weight: 700;">14</td>
+              <td style="color: inherit; font-weight: normal;">0</td>
               <td>0</td>
               <td>
-                <span class="badge-chip fail">DEFECT DETECTED</span>
+                <span class="badge-chip pass">COMPLIANT</span>
               </td>
               <td>
                 <div style="display: flex; align-items: center; gap: 8px;">
                   <div class="progress-bar-container">
-                    <div class="progress-fill-pass" style="width: 0%;"></div>
-                    <div class="progress-fill-fail" style="width: 100%;"></div>
+                    <div class="progress-fill-pass" style="width: 100%;"></div>
+                    <div class="progress-fill-fail" style="width: 0%;"></div>
                   </div>
-                  <span style="font-size: 11px; font-weight: 700;">0%</span>
+                  <span style="font-size: 11px; font-weight: 700;">100%</span>
                 </div>
               </td>
-              <td style="font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px;">1.1s</td>
+              <td style="font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px;">10.9s</td>
             </tr>
           </tbody>
         </table>
@@ -1227,9 +1227,9 @@
         </div>
 
         <div class="filter-group">
-          <button class="pill-btn active" data-filter="all">All (6)</button>
-          <button class="pill-btn fail" data-filter="failed">Failed (6)</button>
-          <button class="pill-btn pass" data-filter="passed">Passed (0)</button>
+          <button class="pill-btn active" data-filter="all">All (14)</button>
+          <button class="pill-btn fail" data-filter="failed">Failed (0)</button>
+          <button class="pill-btn pass" data-filter="passed">Passed (14)</button>
           <button class="pill-btn" data-filter="flaky">Flaky (0)</button>
           <button class="pill-btn" data-filter="skipped">Skipped (0)</button>
         </div>
@@ -1245,48 +1245,40 @@
       <!-- Suites Container -->
       <div id="suitesList">
         
-    <div class="suite-box" data-category="Functional Spec">
+    <div class="suite-box" data-category="API Contract">
       <div class="suite-box-header">
         <div class="suite-name-group">
           <span>📁</span>
-          <span>tests/example.spec.js</span>
-          <span class="tag-category">Functional Spec</span>
+          <span>tests/api/api.spec.js</span>
+          <span class="tag-category">API Contract</span>
         </div>
         <div class="suite-metrics">
-          <span class="badge-chip pass">0 passed</span>
-          <span class="badge-chip fail">6 failed</span>
+          <span class="badge-chip pass">14 passed</span>
           
           
-          <span style="color: var(--text-dim); font-size: 11px;">(1.1s)</span>
+          
+          <span style="color: var(--text-dim); font-size: 11px;">(10.9s)</span>
         </div>
       </div>
       <div class="test-nodes-list">
         
-    <div class="test-node open"
-         data-status="failed"
+    <div class="test-node "
+         data-status="passed"
          data-browser="chromium"
-         data-title="has title"
-         data-file="tests/example.spec.js"
-         data-error="Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14">
+         data-title="GET all products list"
+         data-file="tests/api/api.spec.js"
+         data-error="">
       <div class="test-header-bar">
         <div class="test-info-cell">
-          <div class="test-status-indicator failed"></div>
+          <div class="test-status-indicator passed"></div>
           <div class="test-title-col">
-            <span class="test-suite-hierarchy">example.spec.js</span>
-            <span class="test-title-text">has title</span>
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">GET all products list</span>
           </div>
         </div>
         <div class="test-badges-col">
           <span class="browser-chip">chromium</span>
-          <span class="latency-chip">253ms</span>
+          <span class="latency-chip">2.7s</span>
           <svg class="chevron-icon" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
@@ -1295,104 +1287,70 @@ Call log:
 
       <div class="test-drawer">
         
-        <div class="defect-banner">
-          <div class="defect-banner-head">
-            <span class="defect-label">&#9888; Critical Exception Encountered (tests/example.spec.js:4)</span>
-            <div class="defect-buttons">
-              <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] has title
-*Module:* tests/example.spec.js:4
-*Browser / Project:* chromium
-*Execution Status:* Failed (Regression Audit)
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14
-{code}">Copy JIRA Defect Ticket</button>
-            </div>
-          </div>
-          <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14</div>
-        </div>
 
         
         <div style="margin-top: 14px;">
-          <div class="timeline-title">Scenario Execution Timeline (4 Steps)</div>
+          <div class="timeline-title">Scenario Execution Timeline (7 Steps)</div>
           <ul class="timeline-flow">
             
               <li class="timeline-step ">
                 <span class="step-desc">Before Hooks</span>
-                <span class="step-dur">498ms</span>
+                <span class="step-dur">39ms</span>
               </li>
 
-              <li class="timeline-step fail">
-                <span class="step-desc">Navigate</span>
-                <span class="step-dur">59ms</span>
+              <li class="timeline-step ">
+                <span class="step-desc">GET</span>
+                <span class="step-dur">2.7s</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBeGreaterThan&quot;</span>
+                <span class="step-dur">0ms</span>
               </li>
 
               <li class="timeline-step ">
                 <span class="step-desc">After Hooks</span>
-                <span class="step-dur">63ms</span>
-              </li>
-
-              <li class="timeline-step ">
-                <span class="step-desc">Worker Cleanup</span>
-                <span class="step-dur">19ms</span>
+                <span class="step-dur">8ms</span>
               </li>
           </ul>
         </div>
 
         
-        <div class="screenshots-gallery">
-          <div class="timeline-title">Attached Visual Evidence &amp; Artifacts</div>
-          <div class="gallery-grid">
-            
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="test-node open"
-         data-status="failed"
+    <div class="test-node "
+         data-status="passed"
          data-browser="chromium"
-         data-title="has title"
-         data-file="tests/example.spec.js"
-         data-error="Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14">
+         data-title="Post all products list"
+         data-file="tests/api/api.spec.js"
+         data-error="">
       <div class="test-header-bar">
         <div class="test-info-cell">
-          <div class="test-status-indicator failed"></div>
+          <div class="test-status-indicator passed"></div>
           <div class="test-title-col">
-            <span class="test-suite-hierarchy">example.spec.js</span>
-            <span class="test-title-text">has title</span>
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Post all products list</span>
           </div>
         </div>
         <div class="test-badges-col">
           <span class="browser-chip">chromium</span>
-          <span class="latency-chip">177ms</span>
+          <span class="latency-chip">3.3s</span>
           <svg class="chevron-icon" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
@@ -1401,105 +1359,60 @@ Call log:
 
       <div class="test-drawer">
         
-        <div class="defect-banner">
-          <div class="defect-banner-head">
-            <span class="defect-label">&#9888; Critical Exception Encountered (tests/example.spec.js:4)</span>
-            <div class="defect-buttons">
-              <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] has title
-*Module:* tests/example.spec.js:4
-*Browser / Project:* chromium
-*Execution Status:* Failed (Regression Audit)
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14
-{code}">Copy JIRA Defect Ticket</button>
-            </div>
-          </div>
-          <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14</div>
-        </div>
 
         
         <div style="margin-top: 14px;">
-          <div class="timeline-title">Scenario Execution Timeline (4 Steps)</div>
+          <div class="timeline-title">Scenario Execution Timeline (5 Steps)</div>
           <ul class="timeline-flow">
             
               <li class="timeline-step ">
                 <span class="step-desc">Before Hooks</span>
-                <span class="step-dur">214ms</span>
+                <span class="step-dur">4ms</span>
               </li>
 
-              <li class="timeline-step fail">
-                <span class="step-desc">Navigate</span>
-                <span class="step-dur">46ms</span>
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">3.3s</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toContain&quot;</span>
+                <span class="step-dur">0ms</span>
               </li>
 
               <li class="timeline-step ">
                 <span class="step-desc">After Hooks</span>
-                <span class="step-dur">72ms</span>
-              </li>
-
-              <li class="timeline-step ">
-                <span class="step-desc">Worker Cleanup</span>
-                <span class="step-dur">17ms</span>
+                <span class="step-dur">12ms</span>
               </li>
           </ul>
         </div>
 
         
-        <div class="screenshots-gallery">
-          <div class="timeline-title">Attached Visual Evidence &amp; Artifacts</div>
-          <div class="gallery-grid">
-            
-              <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="screenshot" title="Click to inspect full view">
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="test-node open"
-         data-status="failed"
+    <div class="test-node "
+         data-status="passed"
          data-browser="chromium"
-         data-title="has title"
-         data-file="tests/example.spec.js"
-         data-error="Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14">
+         data-title="GET all brands list"
+         data-file="tests/api/api.spec.js"
+         data-error="">
       <div class="test-header-bar">
         <div class="test-info-cell">
-          <div class="test-status-indicator failed"></div>
+          <div class="test-status-indicator passed"></div>
           <div class="test-title-col">
-            <span class="test-suite-hierarchy">example.spec.js</span>
-            <span class="test-title-text">has title</span>
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">GET all brands list</span>
           </div>
         </div>
         <div class="test-badges-col">
           <span class="browser-chip">chromium</span>
-          <span class="latency-chip">168ms</span>
+          <span class="latency-chip">328ms</span>
           <svg class="chevron-icon" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
@@ -1508,105 +1421,70 @@ Call log:
 
       <div class="test-drawer">
         
-        <div class="defect-banner">
-          <div class="defect-banner-head">
-            <span class="defect-label">&#9888; Critical Exception Encountered (tests/example.spec.js:4)</span>
-            <div class="defect-buttons">
-              <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] has title
-*Module:* tests/example.spec.js:4
-*Browser / Project:* chromium
-*Execution Status:* Failed (Regression Audit)
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14
-{code}">Copy JIRA Defect Ticket</button>
-            </div>
-          </div>
-          <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14</div>
-        </div>
 
         
         <div style="margin-top: 14px;">
-          <div class="timeline-title">Scenario Execution Timeline (4 Steps)</div>
+          <div class="timeline-title">Scenario Execution Timeline (7 Steps)</div>
           <ul class="timeline-flow">
             
               <li class="timeline-step ">
                 <span class="step-desc">Before Hooks</span>
-                <span class="step-dur">219ms</span>
+                <span class="step-dur">5ms</span>
               </li>
 
-              <li class="timeline-step fail">
-                <span class="step-desc">Navigate</span>
-                <span class="step-dur">41ms</span>
+              <li class="timeline-step ">
+                <span class="step-desc">GET</span>
+                <span class="step-dur">326ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBeGreaterThan&quot;</span>
+                <span class="step-dur">0ms</span>
               </li>
 
               <li class="timeline-step ">
                 <span class="step-desc">After Hooks</span>
-                <span class="step-dur">67ms</span>
-              </li>
-
-              <li class="timeline-step ">
-                <span class="step-desc">Worker Cleanup</span>
-                <span class="step-dur">15ms</span>
+                <span class="step-dur">4ms</span>
               </li>
           </ul>
         </div>
 
         
-        <div class="screenshots-gallery">
-          <div class="timeline-title">Attached Visual Evidence &amp; Artifacts</div>
-          <div class="gallery-grid">
-            
-              <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="screenshot" title="Click to inspect full view">
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="test-node open"
-         data-status="failed"
+    <div class="test-node "
+         data-status="passed"
          data-browser="chromium"
-         data-title="get started link"
-         data-file="tests/example.spec.js"
-         data-error="Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14">
+         data-title="Put all brands list"
+         data-file="tests/api/api.spec.js"
+         data-error="">
       <div class="test-header-bar">
         <div class="test-info-cell">
-          <div class="test-status-indicator failed"></div>
+          <div class="test-status-indicator passed"></div>
           <div class="test-title-col">
-            <span class="test-suite-hierarchy">example.spec.js</span>
-            <span class="test-title-text">get started link</span>
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Put all brands list</span>
           </div>
         </div>
         <div class="test-badges-col">
           <span class="browser-chip">chromium</span>
-          <span class="latency-chip">185ms</span>
+          <span class="latency-chip">342ms</span>
           <svg class="chevron-icon" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
@@ -1615,105 +1493,60 @@ Call log:
 
       <div class="test-drawer">
         
-        <div class="defect-banner">
-          <div class="defect-banner-head">
-            <span class="defect-label">&#9888; Critical Exception Encountered (tests/example.spec.js:11)</span>
-            <div class="defect-buttons">
-              <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] get started link
-*Module:* tests/example.spec.js:11
-*Browser / Project:* chromium
-*Execution Status:* Failed (Regression Audit)
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14
-{code}">Copy JIRA Defect Ticket</button>
-            </div>
-          </div>
-          <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14</div>
-        </div>
 
         
         <div style="margin-top: 14px;">
-          <div class="timeline-title">Scenario Execution Timeline (4 Steps)</div>
+          <div class="timeline-title">Scenario Execution Timeline (5 Steps)</div>
           <ul class="timeline-flow">
             
               <li class="timeline-step ">
                 <span class="step-desc">Before Hooks</span>
-                <span class="step-dur">223ms</span>
+                <span class="step-dur">4ms</span>
               </li>
 
-              <li class="timeline-step fail">
-                <span class="step-desc">Navigate</span>
-                <span class="step-dur">50ms</span>
+              <li class="timeline-step ">
+                <span class="step-desc">PUT</span>
+                <span class="step-dur">339ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toContain&quot;</span>
+                <span class="step-dur">0ms</span>
               </li>
 
               <li class="timeline-step ">
                 <span class="step-desc">After Hooks</span>
-                <span class="step-dur">73ms</span>
-              </li>
-
-              <li class="timeline-step ">
-                <span class="step-desc">Worker Cleanup</span>
-                <span class="step-dur">18ms</span>
+                <span class="step-dur">5ms</span>
               </li>
           </ul>
         </div>
 
         
-        <div class="screenshots-gallery">
-          <div class="timeline-title">Attached Visual Evidence &amp; Artifacts</div>
-          <div class="gallery-grid">
-            
-              <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="screenshot" title="Click to inspect full view">
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="test-node open"
-         data-status="failed"
+    <div class="test-node "
+         data-status="passed"
          data-browser="chromium"
-         data-title="get started link"
-         data-file="tests/example.spec.js"
-         data-error="Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14">
+         data-title="Post to search products"
+         data-file="tests/api/api.spec.js"
+         data-error="">
       <div class="test-header-bar">
         <div class="test-info-cell">
-          <div class="test-status-indicator failed"></div>
+          <div class="test-status-indicator passed"></div>
           <div class="test-title-col">
-            <span class="test-suite-hierarchy">example.spec.js</span>
-            <span class="test-title-text">get started link</span>
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Post to search products</span>
           </div>
         </div>
         <div class="test-badges-col">
           <span class="browser-chip">chromium</span>
-          <span class="latency-chip">161ms</span>
+          <span class="latency-chip">374ms</span>
           <svg class="chevron-icon" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
@@ -1722,105 +1555,70 @@ Call log:
 
       <div class="test-drawer">
         
-        <div class="defect-banner">
-          <div class="defect-banner-head">
-            <span class="defect-label">&#9888; Critical Exception Encountered (tests/example.spec.js:11)</span>
-            <div class="defect-buttons">
-              <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] get started link
-*Module:* tests/example.spec.js:11
-*Browser / Project:* chromium
-*Execution Status:* Failed (Regression Audit)
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14
-{code}">Copy JIRA Defect Ticket</button>
-            </div>
-          </div>
-          <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14</div>
-        </div>
 
         
         <div style="margin-top: 14px;">
-          <div class="timeline-title">Scenario Execution Timeline (4 Steps)</div>
+          <div class="timeline-title">Scenario Execution Timeline (7 Steps)</div>
           <ul class="timeline-flow">
             
               <li class="timeline-step ">
                 <span class="step-desc">Before Hooks</span>
-                <span class="step-dur">211ms</span>
+                <span class="step-dur">5ms</span>
               </li>
 
-              <li class="timeline-step fail">
-                <span class="step-desc">Navigate</span>
-                <span class="step-dur">41ms</span>
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">370ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">1ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBeGreaterThan&quot;</span>
+                <span class="step-dur">0ms</span>
               </li>
 
               <li class="timeline-step ">
                 <span class="step-desc">After Hooks</span>
-                <span class="step-dur">66ms</span>
-              </li>
-
-              <li class="timeline-step ">
-                <span class="step-desc">Worker Cleanup</span>
-                <span class="step-dur">15ms</span>
+                <span class="step-dur">6ms</span>
               </li>
           </ul>
         </div>
 
         
-        <div class="screenshots-gallery">
-          <div class="timeline-title">Attached Visual Evidence &amp; Artifacts</div>
-          <div class="gallery-grid">
-            
-              <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="screenshot" title="Click to inspect full view">
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="test-node open"
-         data-status="failed"
+    <div class="test-node "
+         data-status="passed"
          data-browser="chromium"
-         data-title="get started link"
-         data-file="tests/example.spec.js"
-         data-error="Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14">
+         data-title="Post to search products without search term"
+         data-file="tests/api/api.spec.js"
+         data-error="">
       <div class="test-header-bar">
         <div class="test-info-cell">
-          <div class="test-status-indicator failed"></div>
+          <div class="test-status-indicator passed"></div>
           <div class="test-title-col">
-            <span class="test-suite-hierarchy">example.spec.js</span>
-            <span class="test-title-text">get started link</span>
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Post to search products without search term</span>
           </div>
         </div>
         <div class="test-badges-col">
           <span class="browser-chip">chromium</span>
-          <span class="latency-chip">183ms</span>
+          <span class="latency-chip">353ms</span>
           <svg class="chevron-icon" viewBox="0 0 24 24">
             <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
           </svg>
@@ -1829,77 +1627,581 @@ Call log:
 
       <div class="test-drawer">
         
-        <div class="defect-banner">
-          <div class="defect-banner-head">
-            <span class="defect-label">&#9888; Critical Exception Encountered (tests/example.spec.js:11)</span>
-            <div class="defect-buttons">
-              <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] get started link
-*Module:* tests/example.spec.js:11
-*Browser / Project:* chromium
-*Execution Status:* Failed (Regression Audit)
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14
-{code}">Copy JIRA Defect Ticket</button>
-            </div>
-          </div>
-          <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14</div>
-        </div>
 
         
         <div style="margin-top: 14px;">
-          <div class="timeline-title">Scenario Execution Timeline (4 Steps)</div>
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
           <ul class="timeline-flow">
             
               <li class="timeline-step ">
                 <span class="step-desc">Before Hooks</span>
-                <span class="step-dur">226ms</span>
+                <span class="step-dur">6ms</span>
               </li>
 
-              <li class="timeline-step fail">
-                <span class="step-desc">Navigate</span>
-                <span class="step-dur">49ms</span>
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">350ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
               </li>
 
               <li class="timeline-step ">
                 <span class="step-desc">After Hooks</span>
-                <span class="step-dur">73ms</span>
-              </li>
-
-              <li class="timeline-step ">
-                <span class="step-desc">Worker Cleanup</span>
-                <span class="step-dur">19ms</span>
+                <span class="step-dur">5ms</span>
               </li>
           </ul>
         </div>
 
         
-        <div class="screenshots-gallery">
-          <div class="timeline-title">Attached Visual Evidence &amp; Artifacts</div>
-          <div class="gallery-grid">
-            
-              <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="screenshot" title="Click to inspect full view">
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Post to create account API with valid credentials"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Post to create account API with valid credentials</span>
           </div>
         </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">334ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">5ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">330ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">7ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Verify login API with valid credentials"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Verify login API with valid credentials</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">375ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">5ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">367ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">12ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Verify login API without Password"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Verify login API without Password</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">609ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">7ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">603ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">10ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Delete to verify login API"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Delete to verify login API</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">377ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (5 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">6ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">DELETE</span>
+                <span class="step-dur">374ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toContain&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">8ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Post to verify login API with invalid credentials"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Post to verify login API with invalid credentials</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">650ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">5ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">POST</span>
+                <span class="step-dur">643ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">9ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Get User details by email"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Get User details by email</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">406ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (7 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">8ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">GET</span>
+                <span class="step-dur">401ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBeDefined&quot;</span>
+                <span class="step-dur">1ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">8ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Put to update user account"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Put to update user account</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">351ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">8ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">PUT</span>
+                <span class="step-dur">347ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">8ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="test-node "
+         data-status="passed"
+         data-browser="chromium"
+         data-title="Delete an account with valid credentials"
+         data-file="tests/api/api.spec.js"
+         data-error="">
+      <div class="test-header-bar">
+        <div class="test-info-cell">
+          <div class="test-status-indicator passed"></div>
+          <div class="test-title-col">
+            <span class="test-suite-hierarchy">api/api.spec.js › API Tests</span>
+            <span class="test-title-text">Delete an account with valid credentials</span>
+          </div>
+        </div>
+        <div class="test-badges-col">
+          <span class="browser-chip">chromium</span>
+          <span class="latency-chip">372ms</span>
+          <svg class="chevron-icon" viewBox="0 0 24 24">
+            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="test-drawer">
+        
+
+        
+        <div style="margin-top: 14px;">
+          <div class="timeline-title">Scenario Execution Timeline (6 Steps)</div>
+          <ul class="timeline-flow">
+            
+              <li class="timeline-step ">
+                <span class="step-desc">Before Hooks</span>
+                <span class="step-dur">5ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">DELETE</span>
+                <span class="step-dur">369ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">Expect &quot;toBe&quot;</span>
+                <span class="step-dur">0ms</span>
+              </li>
+
+              <li class="timeline-step ">
+                <span class="step-desc">After Hooks</span>
+                <span class="step-dur">28ms</span>
+              </li>
+          </ul>
+        </div>
+
+        
       </div>
     </div>
       </div>
@@ -1910,301 +2212,11 @@ Call log:
     <!-- TAB 3: DEFECT CENTER (RCA) -->
     <div id="tab-defects" class="tab-pane">
       
-      <div class="section-card" style="margin-bottom: 16px;">
-        <h3 style="color: var(--status-fail); margin-bottom: 6px;">Critical Quality Gate Defect Log (6)</h3>
-        <p style="font-size: 13px; color: var(--text-muted);">
-          Each failure contains the root-cause exception, failure coordinates, and a one-click <strong>"Copy JIRA Ticket"</strong> button for immediate bug logging.
-        </p>
+      <div class="section-card defect-empty-state">
+        <div style="font-size: 48px; margin-bottom: 12px;">🛡️</div>
+        <h3>Zero Defects Detected!</h3>
+        <p>All 14 automated test scenarios completed successfully and comply with the Enterprise Quality Gate threshold.</p>
       </div>
-      
-    <div class="defect-card">
-      <div class="defect-header-line">
-        <div>
-          <span style="font-size: 11px; font-weight: 700; color: var(--status-fail); text-transform: uppercase;">Defect #1</span>
-          <h4 class="defect-title-text">has title</h4>
-          <span style="font-size: 12px; color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js:4</span>
-        </div>
-        <div class="defect-meta-pills">
-          <span class="tag-category">Functional Spec</span>
-          <span class="browser-chip">chromium</span>
-          <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] has title
-*Module:* tests/example.spec.js:4
-*Browser / Project:* chromium
-*Category:* Functional Spec
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14
-{code}">Copy JIRA Ticket</button>
-        </div>
-      </div>
-      <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14</div>
-      
-    </div>
-
-    <div class="defect-card">
-      <div class="defect-header-line">
-        <div>
-          <span style="font-size: 11px; font-weight: 700; color: var(--status-fail); text-transform: uppercase;">Defect #2</span>
-          <h4 class="defect-title-text">has title</h4>
-          <span style="font-size: 12px; color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js:4</span>
-        </div>
-        <div class="defect-meta-pills">
-          <span class="tag-category">Functional Spec</span>
-          <span class="browser-chip">chromium</span>
-          <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] has title
-*Module:* tests/example.spec.js:4
-*Browser / Project:* chromium
-*Category:* Functional Spec
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14
-{code}">Copy JIRA Ticket</button>
-        </div>
-      </div>
-      <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14</div>
-      
-      <div style="margin-top: 14px;">
-        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim);">Failure Screenshot</span>
-        <div style="margin-top: 6px;">
-          <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="Failure screenshot">
-        </div>
-      </div>
-    </div>
-
-    <div class="defect-card">
-      <div class="defect-header-line">
-        <div>
-          <span style="font-size: 11px; font-weight: 700; color: var(--status-fail); text-transform: uppercase;">Defect #3</span>
-          <h4 class="defect-title-text">has title</h4>
-          <span style="font-size: 12px; color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js:4</span>
-        </div>
-        <div class="defect-meta-pills">
-          <span class="tag-category">Functional Spec</span>
-          <span class="browser-chip">chromium</span>
-          <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] has title
-*Module:* tests/example.spec.js:4
-*Browser / Project:* chromium
-*Category:* Functional Spec
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14
-{code}">Copy JIRA Ticket</button>
-        </div>
-      </div>
-      <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:5:14</div>
-      
-      <div style="margin-top: 14px;">
-        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim);">Failure Screenshot</span>
-        <div style="margin-top: 6px;">
-          <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="Failure screenshot">
-        </div>
-      </div>
-    </div>
-
-    <div class="defect-card">
-      <div class="defect-header-line">
-        <div>
-          <span style="font-size: 11px; font-weight: 700; color: var(--status-fail); text-transform: uppercase;">Defect #4</span>
-          <h4 class="defect-title-text">get started link</h4>
-          <span style="font-size: 12px; color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js:11</span>
-        </div>
-        <div class="defect-meta-pills">
-          <span class="tag-category">Functional Spec</span>
-          <span class="browser-chip">chromium</span>
-          <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] get started link
-*Module:* tests/example.spec.js:11
-*Browser / Project:* chromium
-*Category:* Functional Spec
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14
-{code}">Copy JIRA Ticket</button>
-        </div>
-      </div>
-      <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14</div>
-      
-      <div style="margin-top: 14px;">
-        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim);">Failure Screenshot</span>
-        <div style="margin-top: 6px;">
-          <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="Failure screenshot">
-        </div>
-      </div>
-    </div>
-
-    <div class="defect-card">
-      <div class="defect-header-line">
-        <div>
-          <span style="font-size: 11px; font-weight: 700; color: var(--status-fail); text-transform: uppercase;">Defect #5</span>
-          <h4 class="defect-title-text">get started link</h4>
-          <span style="font-size: 12px; color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js:11</span>
-        </div>
-        <div class="defect-meta-pills">
-          <span class="tag-category">Functional Spec</span>
-          <span class="browser-chip">chromium</span>
-          <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] get started link
-*Module:* tests/example.spec.js:11
-*Browser / Project:* chromium
-*Category:* Functional Spec
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14
-{code}">Copy JIRA Ticket</button>
-        </div>
-      </div>
-      <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14</div>
-      
-      <div style="margin-top: 14px;">
-        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim);">Failure Screenshot</span>
-        <div style="margin-top: 6px;">
-          <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="Failure screenshot">
-        </div>
-      </div>
-    </div>
-
-    <div class="defect-card">
-      <div class="defect-header-line">
-        <div>
-          <span style="font-size: 11px; font-weight: 700; color: var(--status-fail); text-transform: uppercase;">Defect #6</span>
-          <h4 class="defect-title-text">get started link</h4>
-          <span style="font-size: 12px; color: var(--text-dim); font-family: ui-monospace, SFMono-Regular, monospace;">tests/example.spec.js:11</span>
-        </div>
-        <div class="defect-meta-pills">
-          <span class="tag-category">Functional Spec</span>
-          <span class="browser-chip">chromium</span>
-          <button class="btn-copy-defect" data-defect-content="h3. [AUTOMATION DEFECT] get started link
-*Module:* tests/example.spec.js:11
-*Browser / Project:* chromium
-*Category:* Functional Spec
-*Root Cause:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-{code}
-*Stack Trace:*
-{code:none}
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14
-{code}">Copy JIRA Ticket</button>
-        </div>
-      </div>
-      <div class="stack-code-block">Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://playwright.dev/
-Call log:
-[2m  - navigating to &quot;https://playwright.dev/&quot;, waiting until &quot;load&quot;[22m
-
-    at /Users/muskaantimbadiya/E-Commerce-E2E-Automation-Framework/tests/example.spec.js:12:14</div>
-      
-      <div style="margin-top: 14px;">
-        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: var(--text-dim);">Failure Screenshot</span>
-        <div style="margin-top: 6px;">
-          <img class="gallery-img-thumb" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAIAAABAH0oBAAAQAElEQVR4nOzXAQ0AIAzAsIfg3/LxwVoXvbs7AAAA8LszAAAAECDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMMAAAFAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJAgwAAAinmmqQAAAEdJREFUACQIMAAAAAkCDAAAQIIAAwAAkCDAAAAAJAgwAAAACQIMAABAggADAACQIMAAAAAkCDAAAAAJAgwAAECCAAMAAJDwAAAA///FxCTCAAAABklEQVQDAOhHCKDOc7AcAAAAAElFTkSuQmCC" alt="Failure screenshot">
-        </div>
-      </div>
-    </div>
-      
     </div>
 
     <!-- TAB 4: ENVIRONMENT & SETUP -->
@@ -2236,15 +2248,15 @@ Call log:
             </tr>
             <tr>
               <td><strong>Target Environment</strong></td>
-              <td>CI/CD STAGING</td>
+              <td>QA-E2E PRE-PROD</td>
             </tr>
             <tr>
               <td><strong>Execution Trigger</strong></td>
-              <td>Automated Scheduled Build</td>
+              <td>Developer / QA Local Trigger</td>
             </tr>
             <tr>
               <td><strong>Execution User</strong></td>
-              <td>CI/CD Pipeline Runner</td>
+              <td>muskaantimbadiya</td>
             </tr>
             <tr>
               <td><strong>Active Browser Engines</strong></td>
